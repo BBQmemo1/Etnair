@@ -1,0 +1,234 @@
+.ad {
+  * {
+    grid-column: 3 / 11;
+  }
+
+  @media @tablet {
+    & > * {
+      grid-column: 2 / 12;
+    }
+  }
+
+  @media @mobile {
+    & > * {
+      grid-column: 1 / 7;
+    }
+  }
+
+  // Infos propriétaire
+  &__adRenter {
+    margin-top: 28 * @px;
+    margin-bottom: -10 * @px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .adRenter {
+      &__picture {
+        border-radius: 100 * @px;
+        width: 35 * @px !important;
+        margin-right: 11 * @px;
+      }
+      &__nickname {
+        font-size: 16 * @px;
+      }
+    }
+  }
+
+  // Infos propriété
+  &__adTitle {
+    margin-bottom: -10 * @px;
+
+    @media @not-tablet {
+      grid-column: 2 / 12;
+    }
+  }
+
+  &__adInfos {
+    text-align: center;
+    margin-bottom: 40 * @px;
+
+    @media @not-tablet {
+      grid-column: 2 / 12;
+    }
+
+    sup {
+      font-size: 12 * @px;
+    }
+  }
+
+  &__adPicture {
+    border-radius: 15 * @px;
+    margin-bottom: 32 * @px;
+
+    @media @not-tablet {
+      grid-column: 2 / 12;
+    }
+  }
+
+  &__adFeatures {
+    margin-top: 30 * @px;
+    margin-bottom: 30 * @px;
+    flex-wrap: wrap;
+    gap: 13 * @px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__parent {
+    @media @not-mobile {
+      grid-column: 1/13;
+    }
+
+    cursor: pointer;
+    margin-left:calc(var(--padding-x) * -1);
+    margin-right:calc(var(--padding-x) * -1);
+    width:calc(100% + (var(--padding-x) * 2));
+    overflow: hidden !important ;
+    display: flex;
+    padding-left:var(--padding-x);
+    padding-right:20*@px;
+    justify-content: center;
+    height: 250 * @px !important;
+    margin-bottom: 25 * @px;
+
+    .parent {
+      &__adContainer {
+        overflow: initial !important;
+
+        .adContainer {
+          &__loop {
+            border-radius: 7 * @px;
+          }
+        }
+      }
+    }
+  }
+
+  //Disponibilité
+  &__bookablesDates {
+    @media @not-tablet {
+      grid-column: 4 / 10;
+    }
+    display: flex;
+    justify-content: space-between;
+    .bookablesDates {
+      &__dates {
+      }
+      &__price {
+        font-weight: @semibold;
+        font-size: 20 * @px;
+        span {
+          font-weight: @light;
+        }
+      }
+    }
+  }
+  &__adInputs {
+    @media @not-tablet {
+      grid-column: 4 / 10;
+    }
+    display: flex;
+    height: 60 * @px;
+    border: solid 1 * @px @white;
+    border-radius: @border-radius;
+    margin-top: -10 * @px;
+    margin-bottom: 5 * @px;
+
+    .dp__main {
+      ::placeholder {
+        color: white;
+        opacity: 1;
+      }
+    }
+    .adInputs {
+      background-color: transparent !important;
+
+      &__travelDays {
+        background-color: transparent !important;
+        width: 50%;
+
+        .dp__input {
+          background-color: transparent;
+          border: none;
+          height: 60 * @px;
+          text-align: center;
+          font-family: @font-sans-serif;
+          font-weight: @light !important;
+          color: @white;
+        }
+
+        //Disparition des icôns réinitialiser et calendrier
+        .dp--clear-btn,
+        .dp__input_icon {
+          display: none;
+        }
+
+        .dp__theme_light {
+          --dp-primary-color: @dark-grey;
+          --dp-range-between-dates-background-color: @dark-grey;
+          --dp-range-between-border-color: @dark-grey;
+          --dp-hover-text-color: @dark-grey;
+          --dp-range-between-dates-text-color: @white;
+        }
+        .ad__adInputs .adInputs__hosts {
+          background-color: transparent !important;
+        }
+      }
+
+      &__hosts {
+        width: 50%;
+        background-color: transparent;
+        border: none;
+        color: @white;
+        text-align: center;
+        border-left: solid 1 * @px @white;
+
+        &::placeholder {
+          text-align: center;
+          color: @white;
+          background-color: transparent !important;
+        }
+      }
+    }
+  }
+
+  &__split {
+    @media @not-tablet {
+      grid-column: 4 / 10;
+    }
+    margin-top: 7 * @px;
+    border-bottom: solid 1px @white;
+    width: 100%;
+  }
+
+  &__nightCalculation,
+  &__feeCalculation,
+  &__totalCalculation {
+    @media @not-tablet {
+      grid-column: 4 / 10;
+    }
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -7 * @px;
+  }
+
+  &__totalCalculation {
+    padding-bottom: 20 * @px;
+    border-bottom: solid 1 * @px @white;
+  }
+
+  &__bookingButton {
+    @media @not-tablet {
+      grid-column: 4 / 10;
+    }
+    margin-top: 40 * @px;
+    margin-bottom: 30 * @px !important;
+
+    justify-self: center;
+  }
+
+  &__space {
+    height: 10 * @px;
+  }
+}
