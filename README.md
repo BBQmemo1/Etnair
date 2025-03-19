@@ -1,4 +1,4 @@
-# Groupe de guillo_r 1046898
+# Etnair
 
 ## Getting started
 
